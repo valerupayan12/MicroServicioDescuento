@@ -4,6 +4,7 @@ import jakarta.validation.constraints.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import java.util.Date;
 
 public class CuponDescuentoDTO {
 
@@ -24,7 +25,7 @@ public class CuponDescuentoDTO {
         @NotBlank(message = "El email es obligatorio")
         @Pattern(regexp = "^[\\w\\sáéíóúÁÉÍÓÚñÑ]{2,}\\s+[\\w\\sáéíóúÁÉÍÓÚñÑ]{2,}.*$",
                  message = "El email debe contener al menos 2 palabras")
-        private Sring email;
+        private String email;
 
         @NotNull(message = "El ID del género es obligatorio")
         private Long generoId;
